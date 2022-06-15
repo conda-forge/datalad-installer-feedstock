@@ -12,4 +12,4 @@ case "$(uname)" in
         ;;
 esac
 
-exec python -m pytest -vv --ci -m 'not miniconda' test
+exec python -m pytest -vv --ci -m 'not miniconda and not needs_sudo' test
