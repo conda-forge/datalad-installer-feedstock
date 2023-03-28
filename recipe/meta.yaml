@@ -1,5 +1,5 @@
 {% set name = "datalad-installer" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b968b73e12da9b52c179a592c75ed2a4bf68105eb57346ec973f722b382b4645
+  sha256: 76ec07b3b3e6475ef1ac95da7f157f5717b7408b31651fcbe23b4d961df15307
 
 build:
   noarch: python
