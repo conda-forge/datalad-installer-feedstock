@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - datalad-installer = datalad_installer:main
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   requires:
@@ -31,6 +31,7 @@ test:
     - pytest
     - pytest-cov
     - pytest-mock
+    - python {{ python_min }}
   files:
     - test.bat
     - test.sh
